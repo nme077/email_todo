@@ -82,7 +82,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/nme077/card_app/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/nme077/email_todo/issues) for a list of proposed features (and known issues).
 
 
 
@@ -104,4 +104,4 @@ Contributions are what make the open source community such an amazing place to b
 
 Nicholas Eveland - nmemusic77@gmail.com
 
-Project Link: [https://github.com/nme077/card_app](https://github.com/nme077/card_app)
+Project Link: [https://github.com/nme077/email_todo](https://github.com/nme077/email_todo)
