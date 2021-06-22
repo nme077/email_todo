@@ -68,7 +68,7 @@ app.post('/send', (req,res) => {
                 to: req.body.email,
                 from: '"Nicholas Eveland" <nicholaseveland93@gmail.com>',
                 subject: req.body.reminder,
-                text: `This is an email reminder. ***LINK TO SITE***`
+                text: `Email reminder sent from https://email-todo.herokuapp.com/`
             };
             smtpTransport.sendMail(mailOptions, (err) => {
                 if(err) {
