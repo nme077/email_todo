@@ -46,7 +46,6 @@
 
 * [React](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com/)
-* [jQuery](https://jquery.com/)
 
 
 
@@ -103,6 +102,6 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Nicholas Eveland - cardapp77@gmail.com
+Nicholas Eveland - nmemusic77@gmail.com
 
 Project Link: [https://github.com/nme077/card_app](https://github.com/nme077/card_app)
