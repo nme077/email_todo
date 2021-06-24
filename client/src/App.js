@@ -9,7 +9,7 @@ import RotateLoader from "react-spinners/RotateLoader";
 class Loading extends React.Component {
   render() {
     return(
-      <div className="screenContainer">
+      <div>
         <div className="text-center loadingScreen d-flex align-items-center justify-content-center"></div>
         <div className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 p-0 statusIcon">
           <RotateLoader />
@@ -43,7 +43,7 @@ class App extends React.Component {
       reminder: '',
       emailAddress: '',
       validEmail: '',
-      isLoading: false
+      isLoading: true
     }
   }
   
