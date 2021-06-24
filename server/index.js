@@ -32,7 +32,7 @@ const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.C
 oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    res.sendFile('/client/build/index.html');
 });
 
 
