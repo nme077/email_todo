@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 const async = require('async');
 const nodemailer = require('nodemailer');
 const { gmail } = require('googleapis/build/src/apis/gmail');
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
