@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 const async = require('async');
 const nodemailer = require('nodemailer');
 const { gmail } = require('googleapis/build/src/apis/gmail');
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -29,10 +30,6 @@ app.use(session({
 // CONFIGURE EMAIL
 const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET, process.env.REDIRECT_URI);
 oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
-
-app.get('*', (req, res) => {
-    res.json('success');
-});
 
 
 app.post('/send', (req,res) => {
@@ -86,6 +83,10 @@ app.post('/send', (req,res) => {
         res.redirect('back');
     });
 })
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
   
   app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
