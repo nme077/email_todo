@@ -9,7 +9,7 @@ body {
     z-index: 100000;
 }
 
-.loadingScreen, .success {
+.loadingScreen {
     z-index: 100000;
     background-color: gray;
     height: 100vh;
@@ -19,7 +19,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    opacity: 50%;
+    opacity: 0.50;
 }
 
 .statusIcon {
@@ -28,7 +28,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    opacity: 100%;
+    opacity: 1.0;
 }
 
 .bi-check-lg {
