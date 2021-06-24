@@ -38,9 +38,7 @@ app.post('/send', (req,res) => {
         function(done) {
             oAuth2Client.getAccessToken((err, accessToken) => {
                 if (err) {
-                    console.log(err)
-                    req.flash('error', 'Something went wrong, try again.');
-                    return res.redirect('back');
+                    res.send(err);
                 }
                 done(err, accessToken)
             });
@@ -71,24 +69,18 @@ app.post('/send', (req,res) => {
             };
             smtpTransport.sendMail(mailOptions, (err) => {
                 if(err) {
-                    console.log(err)
-                    req.flash('error', 'Something went wrong, try again');
+                    res.send(err);
                     return done(err, 'done');
                 }
-                req.flash('success', `An email has been sent with your reminder`);
-                res.redirect('back');
+                res.json('success');
             });
         }
     ], function(err) {
-        if(err) return console.log(err);
-        res.redirect('back');
+        if(err) return res.send(err);
+        res.json('success');
     });
-})
-
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
   
-  app.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
-  });
+});
