@@ -43,7 +43,7 @@ class App extends React.Component {
       reminder: '',
       emailAddress: '',
       validEmail: '',
-      isLoading: true
+      isLoading: false
     }
   }
   
