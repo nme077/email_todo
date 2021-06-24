@@ -5,6 +5,10 @@ body {
     font-family: Helvetica;
 }
 
+.screenContainer {
+    z-index: 100000;
+}
+
 .loadingScreen, .success {
     z-index: 100000;
     background-color: gray;
