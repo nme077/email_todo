@@ -7,7 +7,6 @@ const flash = require('connect-flash');
 const async = require('async');
 const nodemailer = require('nodemailer');
 const { gmail } = require('googleapis/build/src/apis/gmail');
-const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -32,7 +31,7 @@ const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.C
 oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
 
 app.get('*', (req, res) => {
-    res.sendFile('/client/build/index.html');
+    res.json('success');
 });
 
 
